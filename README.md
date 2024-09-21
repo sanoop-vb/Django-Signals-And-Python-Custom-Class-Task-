@@ -3,7 +3,7 @@
 
 ## Topic: Django Signals
 
-### Question 1: By default are django signals executed synchronously or asynchronously? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
+#### Question 1: By default are django signals executed synchronously or asynchronously? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
 
 ```Answer-
 import time
@@ -21,7 +21,7 @@ request_finished.send(sender=None)
 print("Signal sent.")
 ```
 
-### Question 2: Do django signals run in the same thread as the caller? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
+#### Question 2: Do django signals run in the same thread as the caller? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
 
 ```Answer-
 import threading
@@ -44,7 +44,7 @@ obj = MyModel.objects.create(name="Test")
 print("Object created")
 print(f"Main thread ID: {threading.get_ident()}")
 ```
-### Question 3: By default do django signals run in the same database transaction as the caller? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
+#### Question 3: By default do django signals run in the same database transaction as the caller? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
 
 ```Answer-
 from django.db import models, transaction
